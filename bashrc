@@ -1,0 +1,16 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+#PS1='[\u@\h \W]\$ '
+
+neofetch
+
+_GREEN=$(tput setaf 2)
+_BOLD=$(tput bold)
+_WHITE=$(tput setaf 7)
+export PS1="\e[0;31m[\u@\h]${_WHITE}-${_GREEN}[\w]\n${_BOLD}$ \e[m"
